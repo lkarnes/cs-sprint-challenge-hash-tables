@@ -1,9 +1,17 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    result = []
+    matches = {}
+    for i in a:
+        if i < 0:
+            if -i not in matches:
+                matches[-i] = False
+            else:
+                result.append(-i)
+        else:
+            if i not in matches:
+                matches[i] = False
+            else: 
+                result.append(i)
     return result
 
 
